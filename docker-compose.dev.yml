@@ -1,0 +1,38 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./frontend:/usr/src/app
+    environment:
+      - REACT_BACKEND_URL=http://localhost:5000
+    ports:
+      - 5173:5173
+  backend:
+    build:
+      context: ./backend
+      dockerfile: dev.Dockerfile
+    depends_on:
+      - postgres
+    ports:
+      - 5000:5000
+    environment:
+      - DATABASE_URL=postgres://postgres:mysecretpassword@postgres:5432/postgres
+    volumes:
+      - ./backend:/usr/src/app
+    container_name: intouch-backend
+
+  postgres:
+    image: postgres
+    ports:
+      - 5431:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+volume:
+  - postgres-data

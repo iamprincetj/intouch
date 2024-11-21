@@ -1,0 +1,33 @@
+.all-organization {
+}
+
+.all-organization .heading {
+  text-align: center;
+}
+
+.all-organization .organizations-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  place-content: space-between;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 36em) {
+    .all-organization .organizations-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 62em) {
+  .all-organization .organizations-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 92em) {
+  .all-organization .organizations-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

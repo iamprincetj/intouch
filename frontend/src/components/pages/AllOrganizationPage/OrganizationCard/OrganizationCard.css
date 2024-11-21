@@ -1,0 +1,124 @@
+.organization-card-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1em;
+    cursor: pointer;
+    margin: 0.5em 0;
+    outline: 0.5em solid var(--White);
+    padding: 0.3em 0;
+}
+
+.organization-card-container .organization-card-content {
+    margin: 0.5em auto;
+    width: 90%;
+}
+
+.organization-card-content .card-content-header {
+    color: var(--White);
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content-header .organization-type {
+    background-color: var(--Bg-Primary);
+    border: 1px solid;
+    border-radius: 0.3em;
+    padding: 0.3em 1em;
+}
+
+.card-content-header .organization-img {
+    background-color: var(--Bg-Primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.organization-card-content .card-content-footer {
+    background-color: var(--White);
+    border-radius: 1em;
+    margin-top: 5em;
+    padding: 1em 0;
+}
+
+.card-content-footer .inner-card-content {
+    margin: auto;
+    width: 90%;
+}
+
+.inner-card-content .organization-name {
+    font-size: 1.5rem;
+}
+
+.inner-card-content .organization-leader {
+    font-size: 1rem;
+}
+
+.inner-card-content .organization-create-date {
+    background-color: var(--AshyBlue);
+    border-radius: 1em;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: inline-block;
+    margin: 1em 0;
+    padding: 0.3em 1em;
+}
+
+.inner-card-content .organization-location {
+    border: 1px solid var(--AshyBlue);
+    border-radius: 1em;
+    margin: 0.5em 0;
+}
+
+.organization-location .organization-location-inner {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+}
+
+.inner-card-content .organization-location img {
+    border-radius: 50%;
+    height: 50px;
+    margin-right: 1em;
+    width: 50px;
+}
+
+.organization-location-inner p {
+    font-size: 1.3rem;
+    font-weight: 450;
+}
+
+.card-content-footer .members-container {
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.members-container .members-img {
+    display: flex;
+    margin-right: 1.5em;
+}
+
+.members-img .member-img {
+    background-color: var(--Bg-Primary);
+    border-radius: 50%;
+    color: var(--White);
+    padding: 0.8em;
+}
+
+.members-img .member-img:nth-child(2),
+.members-img .member-img:nth-child(3) {
+    margin-left: -1em;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 62em) {
+
+}

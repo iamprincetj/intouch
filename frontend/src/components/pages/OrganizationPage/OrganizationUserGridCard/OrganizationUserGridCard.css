@@ -1,0 +1,86 @@
+.user-card-container {
+    background-color: var(--Bg-Primary);
+    outline: 0.3em solid var(--Bg-Primary);
+    border-radius: 1em;
+    cursor: pointer;
+    margin: 1em 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.user-card-container:focus,
+.user-card-container:hover {
+    background-color: var(--White);
+    outline: 0.5em solid var(--White);
+}
+
+.user-card-container .user-card-content {
+    background-color: var(--White);
+    margin-top: 20%;
+    transition: 0.8s;
+}
+
+.user-card-container:focus .user-card-content,
+.user-card-container:hover .user-card-content {
+    background-color: var(--Bg-Primary);
+}
+
+.user-card-content .user-card-inner {
+    margin: auto;
+    width: 90%;
+}
+
+.user-card-inner .user-profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-3em);
+}
+
+.user-profile .user-profile-img {
+    background-color: var(--Bg-Primary);
+    border: 0.3em solid var(--Rose50);
+    border-radius: 50%;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 7em;
+    height: 7em;
+}
+
+
+.user-card-container:focus .user-profile .user-profile-img,
+.user-card-container:hover .user-profile .user-profile-img {
+    background-color: var(--White);
+    border: 0.3em solid var(--Bg-Primary);
+    color: var(--Bg-Primary);
+}
+
+.user-profile-img .role-indicator {
+    border-radius: 50%;
+    height: 1rem;
+    position: absolute;
+    bottom: 1em;
+    right: 0.3em;
+    width: 1rem;
+}
+
+.user-card-inner .user-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transform: translateY(-2em);
+}
+
+.user-info p {
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0;
+}
+
+.user-info .icon {
+    margin-right: 0.5em;
+}
+
+

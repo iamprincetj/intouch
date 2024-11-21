@@ -1,0 +1,89 @@
+.organization-main-container {
+
+}
+
+.organization-main-container .extra-organization-info {
+  background-color: var(--White);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  margin: 0.8em 0;
+  padding: 0.5em 1em;
+}
+
+.extra-organization-info .organization-members {
+  display: flex;
+  align-items: center;
+}
+.organization-members .people-icon {
+  color: var(--Rose900);
+  margin-right: 0.5em;
+}
+
+.organization-members span {
+  color: var(--Rose900);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.extra-organization-info .organization-display {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.organization-display .search-filter {
+  background-color: var(--AshyBlue);
+  border-radius: 0.5em;
+  width: 50%;
+}
+
+.search-filter input {
+  background-color: transparent;
+  border: none;
+  color: var(--Rose900);
+  outline: none;
+  padding: 0.3em 1em;
+}
+
+.organization-display .role-filter {
+  background-color: var(--AshyBlue);
+  border-radius: 0.3em;
+  overflow: hidden;
+  width: 45%;
+}
+
+.role-filter select {
+  background-color: transparent;
+  border: none;
+  color: var(--Rose900);
+  outline: none;
+  padding: 0.3em;
+  width: 100%;
+}
+
+.organization-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2em;
+  place-content: space-between;
+}
+
+@media (min-width: 36em) {
+  .organization-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 62em) {
+  .organization-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 92em) {
+  .organization-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
