@@ -10,7 +10,7 @@ services:
         value: http://backend:5000
     ports:
       - port: 5173
-  
+
   - type: web
     name: backend
     env: docker
