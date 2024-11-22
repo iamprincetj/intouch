@@ -25,22 +25,17 @@ services:
     dependsOn:
       - postgres
 
-  - type: database
-    name: postgres
-    env: docker
-    image: postgres
-    ports:
-      - port: 5432
-    envVars:
-      - key: POSTGRES_USER
-        value: postgres
-      - key: POSTGRES_PASSWORD
-        value: mysecretpassword
-      - key: POSTGRES_DB
-        value: postgres
-    volumes:
-      - name: postgres-data
-        mountPath: /var/lib/postgresql/data
+databases:
+  - name: postgres
+    plan: starter
+    region: oregon
+    diskSizeGB: 10
+    user: postgres
+    password: mysecretpassword
+    databaseName: postgres
+    ipAllowList:
+      - source: 0.0.0.0/0
+        description: Allow all IPs
 
 volumes:
   - name: postgres-data
