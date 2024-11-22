@@ -21,7 +21,6 @@ databases:
   - name: postgres
     plan: free
     region: oregon
-    diskSizeGB: 10
     user: intouchuser
     databaseName: intouch
     ipAllowList:
