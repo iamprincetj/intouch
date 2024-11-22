@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: frontend
+    env: docker
+    dockerfilePath: ./frontend/Dockerfile
+    buildCommand: docker build -t frontend ./frontend
+    startCommand: docker run -p 5173:5173 frontend
+    envVars:
+      - key: REACT_BACKEND_URL
+        value: http://backend:5000
+    ports:
+      - port: 5173
+  
+  - type: web
+    name: backend
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    buildCommand: docker build -t backend ./backend
+    startCommand: docker run -p 5000:5000 backend
+    envVars:
+      - key: DATABASE_URL
+        value: postgres://postgres:mysecretpassword@postgres:5432/postgres
+    ports:
+      - port: 5000
+    dependsOn:
+      - postgres
+
+  - type: database
+    name: postgres
+    env: docker
+    image: postgres
+    ports:
+      - port: 5432
+    envVars:
+      - key: POSTGRES_USER
+        value: postgres
+      - key: POSTGRES_PASSWORD
+        value: mysecretpassword
+      - key: POSTGRES_DB
+        value: postgres
+    volumes:
+      - name: postgres-data
+        mountPath: /var/lib/postgresql/data
+
+volumes:
+  - name: postgres-data
