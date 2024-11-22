@@ -4,7 +4,6 @@ services:
     env: docker
     dockerfilePath: ./frontend/Dockerfile
     buildCommand: docker build -t frontend ./frontend
-    startCommand: docker run -p 5173:5173 frontend
     envVars:
       - key: REACT_BACKEND_URL
         value: http://backend:5000
@@ -14,7 +13,6 @@ services:
     env: docker
     dockerfilePath: ./backend/Dockerfile
     buildCommand: docker build -t backend ./backend
-    startCommand: docker run -p 5000:5000 backend
     envVars:
       - key: DATABASE_URL
         value: postgres://intouchuser:mysecretpassword@postgres:5432/intouch
