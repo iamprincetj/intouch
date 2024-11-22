@@ -8,8 +8,6 @@ services:
     envVars:
       - key: REACT_BACKEND_URL
         value: http://backend:5000
-    ports:
-      - port: 5173
 
   - type: web
     name: backend
@@ -20,8 +18,6 @@ services:
     envVars:
       - key: DATABASE_URL
         value: postgres://postgres:mysecretpassword@postgres:5432/postgres
-    ports:
-      - port: 5000
 
 databases:
   - name: postgres
@@ -29,7 +25,6 @@ databases:
     region: oregon
     diskSizeGB: 10
     user: postgres
-    password: mysecretpassword
     databaseName: postgres
     ipAllowList:
       - source: 0.0.0.0/0
