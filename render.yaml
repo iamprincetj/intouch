@@ -22,12 +22,10 @@ services:
         value: postgres://postgres:mysecretpassword@postgres:5432/postgres
     ports:
       - port: 5000
-    dependsOn:
-      - postgres
 
 databases:
   - name: postgres
-    plan: starter
+    plan: free
     region: oregon
     diskSizeGB: 10
     user: postgres
@@ -36,6 +34,3 @@ databases:
     ipAllowList:
       - source: 0.0.0.0/0
         description: Allow all IPs
-
-volumes:
-  - name: postgres-data
