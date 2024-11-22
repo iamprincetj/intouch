@@ -17,15 +17,15 @@ services:
     startCommand: docker run -p 5000:5000 backend
     envVars:
       - key: DATABASE_URL
-        value: postgres://postgres:mysecretpassword@postgres:5432/postgres
+        value: postgres://intouchuser:mysecretpassword@postgres:5432/intouch
 
 databases:
   - name: postgres
     plan: free
     region: oregon
     diskSizeGB: 10
-    user: postgres
-    databaseName: postgres
+    user: intouchuser
+    databaseName: intouch
     ipAllowList:
       - source: 0.0.0.0/0
         description: Allow all IPs
